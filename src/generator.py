@@ -3,6 +3,7 @@ import string
 
 
 def generate_password(length=16, use_upper=True, use_digits=True, use_symbols=True):
+    """Generate a random password using the secrets module."""
     if length < 4:
         raise ValueError("Length must be at least 4")
     chars = string.ascii_lowercase
