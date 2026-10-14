@@ -24,9 +24,9 @@ python3 -m unittest discover
 
 ## Team
 
-- Maksym Khomych - team lead, developer
-- Name2 - developer
-- Name3 - developer, QA
+- Maksym Khomych (@Maksimka111222) - team lead, developer
+- Diana Zhuk (@dirolssis) - developer
+- Volodymyr Sienko  (@VEivon) - developer, QA
 
 ## Changelog
 
