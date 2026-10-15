@@ -1,6 +1,6 @@
 # Лабораторна робота 02. Налаштування середовища розробки та Git workflow
 
-ПІБ: Сєнко Володимир Павлович
+ПІБ: Сієнко Володимир Павлович
 Група: ІПЗ-22
 Роль у команді: developer, QA
 Репозиторій: [https://github.com/Maksimka111222/password-generator](https://github.com/Maksimka111222/password-generator)
@@ -20,26 +20,34 @@
 ### Гілки
 
 Гілки видалялися після злиття, тому посилання ведуть на Pull Request кожної гілки.
-`назва-гілки-PR11` (перевірка надійності пароля), [PR #11](https://github.com/Maksimka111222/password-generator/pull/11)
-`назва-гілки-PR13` (unit-тести), [PR #13](https://github.com/Maksimka111222/password-generator/pull/13)
- docs/report-Volodymyr (цей звіт)
 
-Я реалізував перевірку надійності пароля (`feat: password strength checker`) і написав unit-тести. Тести запускав на Windows через Git Bash командою py -m unittest discover.
+- feature/strength (перевірка надійності пароля), [PR #11](https://github.com/Maksimka111222/password-generator/pull/11)
+- feature/tests (unit-тести), [PR #13](https://github.com/Maksimka111222/password-generator/pull/13)
+- docs/report-Volodymyr (цей звіт)
+
+Я реалізував модуль перевірки надійності пароля, потім написав unit-тести для генератора й перевірки надійності. Тести запускав на Windows у Git Bash командою py -m unittest discover. Як QA знайшов помилку в генераторі й описав її в Issue #14.
 
 ### Pull Request
 
-[#11](https://github.com/Maksimka111222/password-generator/pull/11) feat: password strength checker, Merged
-[#13](https://github.com/Maksimka111222/password-generator/pull/13) назва PR з тестами, Merged
- Review: [#N назва PR](https://github.com/Maksimka111222/password-generator/pull/N), Approved
+Мої PR:
+- [#11](https://github.com/Maksimka111222/password-generator/pull/11) feat: password strength checker, Merged
+- [#13](https://github.com/Maksimka111222/password-generator/pull/13) test: unit tests, Merged
+
+Review (Approved):
+- [#10](https://github.com/Maksimka111222/password-generator/pull/10) feat: password generator core
+- [#15](https://github.com/Maksimka111222/password-generator/pull/15) fix: guarantee character classes
+- [#16](https://github.com/Maksimka111222/password-generator/pull/16) Team: Maksym Khomych - team lead, developer
+- [#17](https://github.com/Maksimka111222/password-generator/pull/17) docs: update team line in README
+- [#22](https://github.com/Maksimka111222/password-generator/pull/22) docs: add lab02 report by Maksym
 
 ### Коміти
 
-[`хеш`](https://github.com/Maksimka111222/password-generator/commit/хеш) повідомлення коміту
-[`хеш`](https://github.com/Maksimka111222/password-generator/commit/хеш) повідомлення коміту
+- [`fa8cf5f`](https://github.com/Maksimka111222/password-generator/commit/fa8cf5f) feat(strength): add password strength checker
+- [`ef8ca36`](https://github.com/Maksimka111222/password-generator/commit/ef8ca36) test: add unit tests for generator and strength
 
 ## Конфлікт злиття
 
-Конфлікт виник у файл при злитті гілка A та гілка B: обидві змінювали який рядок. Я відкрив файл у VS Code, у блоці <<<<<<< обрав Accept Both / Incoming / Current, зберіг і зробив коміт. Якщо скріни з тренувального відтворення, напиши: «Скріншоти зроблено на тренувальному відтворенні конфлікту».
+Я створив дві гілки, у яких змінив перший рядок файлу README.md по-різному, і злив їх. Git зупинив злиття й позначив конфліктну ділянку маркерами <<<<<<<, =======, >>>>>>>. У VS Code я обрав Accept Both Changes, зберіг файл і зробив коміт. Скріншоти зроблено на тренувальному відтворенні конфлікту.
 
 ![Конфлікт у VS Code](screenshots/12a-conflict.png)
 ![Розв'язаний конфлікт](screenshots/12b-resolved.png)
@@ -54,8 +62,8 @@
 
 ## Issues і реліз
 
-- Issue [#N назва](https://github.com/Maksimka111222/password-generator/issues/N), закритий через PR #M
-- Issue [#N назва](https://github.com/Maksimka111222/password-generator/issues/N), закритий через PR зі звітом (`Closes #N`)
+- Issue [#14](https://github.com/Maksimka111222/password-generator/issues/14) fix: generator does not guarantee each character class, створений мною, закритий PR #15
+- Issue [#23](https://github.com/Maksimka111222/password-generator/issues/23) docs: lab02 report by Volodymyr, закритий через PR зі звітом (`Closes #23`)
 - Реліз: [https://github.com/Maksimka111222/password-generator/releases/tag/v1.0.0](https://github.com/Maksimka111222/password-generator/releases/tag/v1.0.0). Тег v1.0.0 стоїть на коміті fa61392.
 
 ![Закриті Issues](screenshots/06-issues-closed.png)
@@ -63,7 +71,6 @@
 ![Реліз v1.0.0](screenshots/08-release.png)
 
 ## Результати перевірки
-
 ![Тести](screenshots/01-tests.png)
 ![Історія комітів main](screenshots/02-git-log.png)
 ![Мої коміти](screenshots/03-my-commits.png)
@@ -74,4 +81,4 @@
 
 ## Висновки
 
-2–3 речення: чому навчився, що було складним.
+Я навчився працювати з гілками, Pull Request і code review, а також писати unit-тести для модулів проєкту. Найскладнішим було налаштувати запуск тестів на Windows і розібратися з Git Bash. Робота в команді за GitHub Flow показала, чому зміни йдуть через окремі гілки та перевірку.
