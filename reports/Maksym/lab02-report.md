@@ -26,7 +26,7 @@
 - `feature/readme-lead` (оновлення рядка команди в README), [PR #16](https://github.com/Maksimka111222/password-generator/pull/16)
 - `docs/readme-format` (структура README), [PR #19](https://github.com/Maksimka111222/password-generator/pull/19)
 - `docs/readme-team` (імена учасників у README), [PR #20](https://github.com/Maksimka111222/password-generator/pull/20)
-- [`docs/report-maksym`](https://github.com/Maksimka111222/password-generator/tree/docs/report-maksym) (цей звіт)
+- [`docs/report-Maksym`](https://github.com/Maksimka111222/password-generator/tree/docs/report-Maksym) (цей звіт)
 
 Як team lead я створив репозиторій, додав учасників як collaborators, налаштував `.gitignore`, розподілив завдання та створив Issues #5–#9.
 
